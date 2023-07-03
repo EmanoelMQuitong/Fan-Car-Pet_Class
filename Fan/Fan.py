@@ -1,5 +1,5 @@
 class Fan:
-    def __init__(self, speed = 'SLOW', radius = 5, color = 'blue', on = False):
+    def __init__(self, speed, radius, color, on):
         self.__speed = speed
         self.__radius = float(radius)
         self.__on = bool(on)
@@ -21,25 +21,44 @@ class Fan:
         else:
             print("Please choose from 'SLOW', 'MEDIUM', and 'FAST' ONLY.")
     
-    def on(self, on):
+    def get_radius(self):
+        return self.__radius
+    
+    def set_radius(self, radius):
+        if radius >= 5.0 or radius <= 10.0:
+            self.__radius = float(radius)
+        
+        else:
+            print("Please choose from '5.0' to '10.0' ONLY.")
+
+    def get_on(self):
+        return self.__on
+    
+    def set_on(self, on):
         on = on.lower()
         if on == 'yes' or on == 'no':
             if on == 'yes':
-                return True
+                self.__on = True
             if on == 'no':
-                return False
+                self.__on = False
             
         else:
             print("Please choose from 'yes' or 'no' ONLY.")
+    
+    def get_color(self):
+        return self.__color
+    
+    def set_color(self, color):
+        self.__color = color.lower()
 
     def show(self):
         print("Speed: ", self.get_speed())
-        print("Radius: ", self.__radius)
-        print("Is it on?: ", self.__on)
-        print("Color: ", self.__color)
+        print("Radius: ", self.get_radius())
+        print("Is it on?: ", self.get_on())
+        print("Color: ", self.get_color())
     
 
-f1 = Fan()
+f1 = Fan('slow', '5.76', 'no', 'fuisha')
 
 f1.show()
 print('\n')
