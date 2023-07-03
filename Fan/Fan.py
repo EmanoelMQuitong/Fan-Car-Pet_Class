@@ -1,9 +1,23 @@
 class Fan:
-    def __init__(self, speed, radius, color, on):
-        self.__speed = speed
+    def __init__(self, speed = 'SLOW' , radius = 5.0, color = 'blue', on = 'yes'):
+        speed = speed.upper()
+        if speed == 'SLOW' or speed == 'MEDIUM' or speed == 'FAST':
+            if speed == 'SLOW':
+                self.__speed = int(1)
+            elif speed == 'MEDIUM':
+                self.__speed = int(2)
+            elif speed == 'FAST':
+                self.__speed = int(3)
+                
         self.__radius = float(radius)
-        self.__on = bool(on)
         self.__color = str(color.lower())
+        on = on.lower()
+        if on == 'yes' or on == 'no':
+            if on == 'yes':
+                self.__on = True
+            if on == 'no':
+                self.__on = False
+        
 
     def get_speed(self):
         return self.__speed
@@ -57,10 +71,3 @@ class Fan:
         print("Is it on?: ", self.get_on())
         print("Color: ", self.get_color())
     
-
-f1 = Fan('slow', '5.76', 'no', 'fuisha')
-
-f1.show()
-print('\n')
-f1.set_speed('FAST')
-print("Speed: ", f1.get_speed())
