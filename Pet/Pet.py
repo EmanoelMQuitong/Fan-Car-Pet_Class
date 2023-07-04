@@ -20,4 +20,13 @@ class Pet:
         return self.__name
 
     def get_animal_type(self):
-        
+        return self.__animal_type
+    
+    def get_age(self):
+        return self.__age
+    
+    def show(self):
+        print("Animal name: ", self.__name)
+        print("Animal Type: ", self.__animal_type)
+        print("Age: ", self.__age, "months")
+
