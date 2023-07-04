@@ -9,7 +9,9 @@ class Fan:
             elif speed == 'FAST':
                 self.__speed = int(3)
                 
-        self.__radius = float(radius)
+        if float(radius) >= float(5.0) or float(radius) <= float(10.0):
+            self.__radius = float(radius)
+
         self.__color = str(color.lower())
         on = on.lower()
         if on == 'yes' or on == 'no':
@@ -39,7 +41,7 @@ class Fan:
         return self.__radius
     
     def set_radius(self, radius):
-        if radius >= 5.0 or radius <= 10.0:
+        if float(radius) >= float(5.0) or float(radius) <= float(10.0):
             self.__radius = float(radius)
         
         else:

@@ -47,11 +47,21 @@ radius = input("How wide is your fan blades?('5.0' to '10.0'): ")
 color = input("Which color do you like?: ")
 power = input("Do you want to turn it on?: ")
 
-f2 = Fan(speed, radius, color, power)
+f2 = Fan()
 print('\n')
 print('\n')
 
+f2.set_speed(speed)
+f2.set_radius(radius)
+f2.set_color(color)
+f2.set_on(power)
+
 print(RED+BOLD+"Fan 1:"+END)
+
+print('\n')
+
+print(BOLD+BORDER+END)
+print(BOLD+BORDER+END)
 
 print('\n')
 
@@ -79,9 +89,19 @@ radius = input("How wide is your fan blades?('5.0' to '10.0'): ")
 color = input("Which color do you like?: ")
 power = input("Do you want to turn it on?: ")
 
-f3 = Fan(speed, radius, color, power)
+f3 = Fan()
 
 print('\n')
+print('\n')
+
+f3.set_speed(speed)
+f3.set_radius(radius)
+f3.set_color(color)
+f3.set_on(power)
+
+print(PURPLE+BOLD+BORDER+END)
+print(PURPLE+BOLD+BORDER+END)
+
 print('\n')
 
 print(YELLOW+BOLD+"Fan 2:"+END)
