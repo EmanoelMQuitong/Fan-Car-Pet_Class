@@ -24,8 +24,8 @@ class Car:
         return self.__speed
     
     def show(self):
-        print("year_model: ", self.__year_model)
-        print("make: ", self.__make)
-        print("print: ", self.__speed)
+        print("Year Model: ", self.__year_model)
+        print("Make: ", self.__make)
+        print("Current Speed: ", self.__speed)
     
 
