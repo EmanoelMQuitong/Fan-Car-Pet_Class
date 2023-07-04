@@ -20,14 +20,55 @@ BORDER = 100*'='
 print(YELLOW+BOLD+BORDER+END)
 print(YELLOW+BOLD+BORDER+END)
 
-
+print(GREEN+BOLD+"Inputs: "+END)
 
 year = input("Insert year model: ")
 make = input("Insert the body make: ")
 
+print('\n')
+
+print(YELLOW+BOLD+BORDER+END)
+print(YELLOW+BOLD+BORDER+END)
+
 car1 = Car(year, make)
+
+print(BLUE+BOLD+"Status: "+END)
+car1.show()
+
+print('\n')
+
+print(YELLOW+BOLD+BORDER+END)
+print(YELLOW+BOLD+BORDER+END)
+print(GREEN+BOLD+"Accelerate: "+END)
 
 for x in range(5):
     car1.accelerate()
 
+print('\n')
+
+print(BOLD+BORDER+END)
+
+print(BLUE+BOLD+"Status: "+END)
 car1.show()
+
+print('\n')
+
+print(BOLD+BORDER+END)
+print(BOLD+BORDER+END)
+
+print(GREEN+BOLD+"Brake: "+END)
+
+for x in range(5):
+    car1.brake()
+
+print('\n')
+
+print(BOLD+BORDER+END)
+
+print(BLUE+BOLD+"Status: "+END)
+car1.show()
+
+print('\n')
+
+print(BOLD+BORDER+END)
+print(BOLD+BORDER+END)
