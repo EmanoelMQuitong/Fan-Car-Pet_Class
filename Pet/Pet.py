@@ -30,3 +30,12 @@ class Pet:
         print("Animal Type: ", self.__animal_type)
         print("Age: ", self.__age, "months")
 
+pet1 = Pet('PETEr', 'werewolf', 36)
+
+pet1.show()
+
+pet1.set_name('CLeaveland')
+pet1.set_animal_type('crab')
+pet1.set_age(3)
+
+pet1.show()
