@@ -1,0 +1,12 @@
+Animal name: CLEAVELAND
+Animal Type: WOLF
+Age: 39
+
+Animal name: MINATOZAKI SANA
+Animal Type: DOG
+Age: 55
+
+Animal name: JEONGYEON JEON
+Animal Type: OSTRICH
+Age: 33
+
